@@ -9132,8 +9132,9 @@ function onSuccess_getDocImage(imageURI) {
 	$("#docVisitPhoto").val(imagePath);
 	
     navigator.camera.getPicture(onSuccess_getDocImage, onFail_getDocImage, { quality: 90,
-		targetWidth: 400,
-		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+	targetWidth: 400,
+	destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
+	alert ('test')
 		
 }
 function onFail_getDocImage(message) {

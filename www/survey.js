@@ -9129,7 +9129,7 @@ function onSuccess_getDocImage(imageURI) {
     image.src = imageURI;
 	imagePath = imageURI;
 	$("#docVisitPhoto").val(imagePath);
-	getDocImage()
+	
 
 		
 }
@@ -9137,7 +9137,6 @@ function onFail_getDocImage(message) {
 	//alert ('Fail')
 	imagePath="";
     alert('Failed because: ' + message);
-	getDocImage()
 }
 
 function getchAddImage() {

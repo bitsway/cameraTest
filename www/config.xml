@@ -6,10 +6,10 @@
         id        = "com.yeapps.pharma"
         version   = "1.0.0">
 
-    <name>Pharma417</name>
+    <name>CameraTest</name>
 
     <description>
-       M-Reporting
+       CameraTest
     </description>
 
     <author href="businesssolutionapps.com" email="info@im-gp.com">

@@ -69,141 +69,65 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
  
  
   
-       <div class="view" id="page_visit_docView">
+      <div class="view" id="page_PrescriptionCaptureView">
         <div class="pages">
-         <header> 
-         <table width="100%" border="0">
-          <tr>
-            <td width="10%" align="left" onClick="page_market_ret()"><img src="icon-arrow-bak.png" width="30" height="30" alt="Back" >	</td>
-            <td align="center" style="font-size:18px; font-weight:normal; color:#F8F8F8">Doctor Visit</td>
-            <td width="10%" ></td> 
-          </tr>
-        </table>
-</header> 
-            <div class="panel" id="page_visit_doc">
+         <header> <h1 align="center" style="font-size:18px; font-weight:normal; color:#F8F8F8">Prescription Capture</h1></header> 
+            <div class="panel" id="page_PrescriptionCapture">
             </br></br></br></br>
-                <!--<div class="card">-->
-                    <!--<h1>Sync</h1>-->
-                     
-				
-			
-            
-					
-                    <div id="doc_ppm"></div>
-					
-                    
-					</br>
-               
-				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-                <tr>
-						<td>Visited With</td>
-						<td ></td>
-						<td ></td>
-                        <td ></td>
-                         <td ></td>
-                         
-					  </tr>
-                      
-                      </table>
-                      <table width="100%" border="0" cellpadding="0" cellspacing="0">
-					  <tr>
-						
-						<td ><input type="radio" name="v_with" value='Self' id="Self" >  <label for="Self"> <font style=" font-size:10px">Self</font></label>
-                         </td>
-						<td > <input type="radio" name="v_with" value='MSO' id="MPO" >  <label for="MPO"><font style=" font-size:10px">MPO</font></label>
-                        </td>
-                        <td ><input type="radio" name="v_with" value='FM/TL' id="AM" >  <label for="AM"><font style=" font-size:10px">AM</font></label>
-                         </td>
-                         <td ><input type="radio" name="v_with" value='RSM' id="RSM" >  <label for="RSM"><font style=" font-size:10px">RSM</font></label>
-                        
-					  </tr>
-			  </table>
-
-		
-                </form>
-                </br>
-                Others:</br>
-                <input type="text" name="doc_others"  maxlength="50"  id="doc_others" placeholder="Others"  >
-                </br>
-                <input type="text" name="doc_feedback"  maxlength="50"  id="doc_feedback" placeholder="Feedback/Note/Place of Work"  >
-                
-				
-			            <br/></br>
-                         
-                          <input type="hidden" name="errorChkVSubmit_doc_t"  maxlength="50"  id="errorChkVSubmit_doc_t" placeholder="Feedback/Note"  >
-                        
-                    
-        				<div id="visit_location_doc" hidden="true">	
-                               		<input type="submit" id="btn_location_doc" onClick="getLocationInfo_ready()();"  style="width:100%; height:50px; background-color:#09C; color:#FFF; font-size:20px" value="     Confirm Location      "   />
-                    </div>
-                    <div align="center"><img id="wait_image_visit_submit_doc" style="" width="50px;" src="loading.gif" alt=""></div>
-                    
-                   
-                    <br/>
-                    <br/>
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <img src="refresh.png" width="70" height="70" alt="TakePic" onClick="setPicture()">
+            </br></br>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                        <td ><img src="camera.png" id="TakePic" width="70" height="70" alt="TakePic" onClick="takePicture()"></td>
+                        <td ><img src="camera.png" width="70" height="70" alt="TakePic" onClick="takePicture()"></td>
+                        <td > </td>
+                        </tr>
+                        <tr>
                         <td >
-                        <img src="images.png" width="100" height="100" alt="Image" id="myImageDoc">
-                        <input name="docVisitPhoto" id="docVisitPhoto" type="hidden" value="" >
+                        <img src="images.png" width="100" height="100" alt="Image" id="myImage1">
+                        <input name="prPhoto1" id="prPhoto1" type="text" value="" >
                         </td>
-                        
+                         <td > <img src="refresh.png" width="30" height="30" alt="TakePic" onClick="cancelPicture(1)"></td>
+                        <tr>
+                        <td >
+                        <img src="images.png" width="100" height="100" alt="Image" id="myImage2">
+                        <input name="prPhoto1" id="prPhoto2" type="hidden" value="" >
+                         </td>
+                          <td > <img src="refresh.png" width="30" height="30" alt="TakePic" onClick="cancelPicture(2)"></td>
+                        <tr>
+                        <td >
+                        <img src="images.png" width="100" height="100" alt="Image" id="myImage3">
+                        <input name="prPhoto1" id="prPhoto3" type="hidden" value="" >
+                         </td>
+                          <td > <img src="refresh.png" width="30" height="30" alt="TakePic" onClick="cancelPicture(3)"></td>
+                        <tr>
+                        <td >
+                        <img src="images.png" width="100" height="100" alt="Image" id="myImage4">
+                        <input name="prPhoto1" id="prPhoto4" type="hidden" value="" >
+                         </td>
+                          <td > <img src="refresh.png" width="30" height="30" alt="TakePic" onClick="cancelPicture(4)"></td>
+                        <tr>
+                        <td >
+                        <img src="images.png" width="100" height="100" alt="Image" id="myImage5">
+                        <input name="prPhoto1" id="prPhoto5" type="hidden" value="" >
+                        </td>
+                         <td > <img src="refresh.png" width="30" height="30" alt="TakePic" onClick="cancelPicture(5)"></td>
                       </tr>
                     </table>
-                    <div id="checkLocation_doc" style="color:#066"></div>
-                    <div id="errorChkVSubmit_doc" style="color:#C00"></div>
-                    <div id="visit_submit_doc">
-                     <input type="submit" id="btn_visit_submit_doc" onClick="visitSubmit();"   style="width:100%; height:100px; background-color:#09C; color:#FFF; font-size:20px" value="     Submit      "   />
-                  
-                    </div>
-                     <br/>
-                    <br/>
-                    <div id="visit_submit_save_doc">
-                     <input type="submit" id="btn_visit_submit_doc" onClick="saveDocvisit();"   style="width:100%; height:80px; background-color:#09C; color:#FFF; font-size:20px" value="     Save      "   />
-                  
+                    
+                
+				
+                        <div   style="color:#2232BD; overflow:scroll ; overflow-style:auto; height:500px" ></div>
                     </div>
                     
-                    <br/>
-                    <br/>
-                    
-                        
-                        
-                        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                        <br/><br/><br/><br/><br/><br/><br/>
-                <br>
-				<br>
-            
-                   
                <!-- </div>-->
-               </div>
             </div>
        
         <footer>
 		<a onClick="homePage()" class="icon home" ></a>
-        <a onClick="page_saved_Doc()" ><img style="padding-top:0px; padding-bottom:0px;" hight="50px" width="50px" src="confirm2.png"></a>
-        <a href="#"  onclick="$.afui.drawer.show('#docInfo','right','push')"><img style="height:30px; width:30px" src="menu.png">  </a>
+        <a onClick="homePage()"  ></a>
          </footer>
-         
-         
-         
-         <nav id="docInfo" style="z-index:5; background-color:#FFF">
-            
-                <header>
-                   
-                </header>
-                <br>
-                 
 
-          	 <div onClick="page_doctor_profile()" align="center"> <img style="height:70px; width:70px" src="editProfile.png"></div>
-
-
-           
-        </nav>
-
-    </div>  
-    
-
+    </div> 
 <!--    ===================Tour doc end====================-->
  <script type="text/javascript" src="phonegap.js"></script>
 
